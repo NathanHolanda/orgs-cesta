@@ -1,6 +1,7 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
 import top from "../../assets/top.png";
 import logo from "../../assets/logo.png";
+import Text from "../components/Text";
 
 const screenWidth = Dimensions.get("screen").width;
 
@@ -8,9 +9,13 @@ export default function Basket() {
     return (
         <>
             <Image source={top} style={styles.image} />
-            <Text style={styles.title}>Detalhe da cesta</Text>
+            <Text bold={true} style={styles.title}>
+                Detalhe da cesta
+            </Text>
             <View style={styles.basket}>
-                <Text style={styles.itemTitle}>Cesta de Verduras</Text>
+                <Text bold={true} style={styles.itemTitle}>
+                    Cesta de Verduras
+                </Text>
                 <View style={styles.farm}>
                     <Image style={styles.farmLogo} source={logo} />
                     <Text style={styles.farmName}>Jenny Jack Farm</Text>
@@ -24,7 +29,9 @@ export default function Basket() {
                     tincidunt mauris mattis faucibus. Aenean ornare placerat
                     facilisis.
                 </Text>
-                <Text style={styles.price}>R$ 40,00</Text>
+                <Text bold={true} style={styles.price}>
+                    R$ 40,00
+                </Text>
             </View>
         </>
     );
